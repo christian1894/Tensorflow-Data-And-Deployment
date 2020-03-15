@@ -29,7 +29,7 @@
                   ] 
                   return{ xs: Object.values(xs), ys: Object.values(labels)};
               }).batch(10);
-        
+        console.log(numOfFeatures)
         const model = tf.sequential();
         model.add(tf.layers.dense({inputShape: [numOfFeatures], activation: "sigmoid", units: 5}))
         model.add(tf.layers.dense({activation: "softmax", units: 3}));
